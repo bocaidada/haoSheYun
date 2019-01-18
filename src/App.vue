@@ -9,7 +9,26 @@
   import heads from './components/Head'
   export default {
     name: 'App',
-    components:{heads}
+    components:{heads},
+    mounted() {
+      this.$router.afterEach((to, from, next) => {
+        window.scrollTo(0, 0)   //跳转页面回到顶部
+      })
+    },
+    watch: {
+      '$route' (to,from){
+        if(to.meta.hedNum >= 0){
+          this.$store.commit('headColorNum',to.meta.hedNum)
+        }
+        if(to.meta.hedNum == -3){
+          this.$store.commit('headColorNum',3)
+          this.$store.commit('newsFlag',false)
+        }
+        if(to.meta.hedNum == 3){
+          this.$store.commit('newsFlag',true)
+        }
+       }
+    }
   }
 </script>
 

@@ -2,8 +2,8 @@
   <div>
     <header>
       <div class="head_left">
-        <img src="../assets/logo.fw.png" alt="" class="logo" ondragstart="return false">
-        <img src="../assets/xcy.png" alt="" class="info" ondragstart="return false">
+        <img src="../../static/img/logo.png" alt="" class="logo" ondragstart="return false">
+        <img src="../../static/img/index_02.png" alt="" class="info" ondragstart="return false">
       </div>
       <ul class="head_right">
         <li v-for="(item,index) in headData" :key="index" @click="changes(index)"  :class="{hit_color:headNum == index}">
@@ -22,15 +22,22 @@
             return {
               headData:[
                 {name:'首页',path:'/'},
-                {name:'关于我们',path:'/about'},
-                {name:'公司业务',path:'/business'},
-                {name:'技术支持',path:'/server'},
+                {name:'公司业务',path:'/server'},
+                {name:'技术支持',path:'/technology'},
                 {name:'新闻资讯',path:'/news'},
                 {name:'经典案例',path:'/case'},
+                {name:'关于我们',path:'/about'},
                 {name:'联系我们',path:'/contact'},
               ],
-              headNum: 0,
+              headNum: this.$store.state.headColorNum,
             }
+        },
+        watch:{
+          "$store.state.headColorNum" (val,old) {
+            if(val) {
+              this.headNum = val
+            }
+          }
         },
         methods: {
           changes(index) {
@@ -63,6 +70,7 @@
       text-align: left;
       .logo{
         width: auto;
+        /*height: 72px;*/
         position: absolute;
         left: 0;
         top: 0;
@@ -77,6 +85,7 @@
       }
     }
     .head_right{
+      // width: 65%;
       float: right;
       height: 100%;
       li{
@@ -94,10 +103,17 @@
         }
       }
       .hit_color{
-        border-top: 2px solid #ff400a;
+        border-top: 2px solid #408CD2;
         background: #efefef;
         /*color: #df8711;*/
       }
     }
+  }
+  @media screen and (max-width: 1350px) {
+    header>.head_right>li{
+      width: 80px !important;
+      font-size: 14px
+    }
+
   }
 </style>

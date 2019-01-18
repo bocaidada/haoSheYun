@@ -4,23 +4,93 @@
     <div class="banner">
       <swiper :options="swiperOption" style="height: 100%">
         <swiper-slide v-for="(item,index) in bannerData" :key="index" :style="{background: 'url('+imgUrl+item.img+') no-repeat center/cover'}">
-          <a style="display: block;width: 100%;height: 100%" v-if="item.url" :href="item.url" target="_blank"></a>
+          <!--<a style="display: block;width: 100%;height: 100%" v-if="item.url" :href="item.url" target="_blank"></a>-->
         </swiper-slide>
-        <!--<div class="swiper-pagination" slot="pagination"></div>-->
+        <div class="swiper-pagination" slot="pagination"></div>
         <!--<div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>-->
         <!--<div class="swiper-button-next swiper-button-white" slot="button-next"></div>-->
       </swiper>
     </div>
+    <div class="operation">
+      <div class="operation_top">
+        <h1>公司业务</h1>
+      </div>
+      <div class="operation_box">
+        <div class="opera_list_left reveal-right">
+          <div class="left">
+            <h1>三维家居商城</h1>
+            <h5>覆盖家装设计到家居建材全品类销售的电商平台</h5>
+            <p>大数据、智能制造</p>
+            <p>互联网+虚拟现实、VR参观浏览</p>
+            <p>木门定制、三维可视化化技术融入生活</p>
+            <p>覆盖施工管理、家装设计到家居建材全品类销售</p>
+          </div>
+          <div class="imgBox">
+            <img src="../../static/img/new_list.jpg" alt="">
+          </div>
+        </div>
+        <div class="opera_list_right reveal-left">
+          <div class="imgBox">
+            <img src="../../static/img/new_list.jpg" alt="">
+          </div>
+          <div class="right">
+            <h1>家装港咨询平台</h1>
+            <h5>为装修业主及装修企业提供家装资讯的服务平台</h5>
+            <p>装修设计、家装知识</p>
+            <p>材料选购，家具选购以及家具保养</p>
+            <p>为装修企业提供各种排名服务以及客户流量和资源</p>
+            <p>定期举行全国性家装设计大赛、各种行业报告、会议和学术研讨</p>
+          </div>
+        </div>
+        <div class="opera_list_left reveal-right">
+          <div class="left">
+            <h1>门装宝新零售平台</h1>
+            <h5>专注销售门及关联产品的F2B新零售平台</h5>
+            <p>个性化定制</p>
+            <p>去中间商，厂家直销</p>
+            <p>互联网+虚拟现实、VR真三维装修设计</p>
+            <p>为经销商、安装技师等注册会员提供包括厂家直销、线上下单、跟踪定制、物流跟单、技师抢单等一站式扁平化服务</p>
+          </div>
+          <div class="imgBox">
+            <img src="../../static/img/new_list.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
     <!--we can-->
+    <div class="case">
+      <h1>成功案例</h1>
+      <h5>Our Cases List</h5>
+      <div class="case_box">
+        <router-link tag="div" to="/case" class="case_lst">
+          <img src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/06.50599bb3.jpg" class="fo" alt="">
+          <div class="to">
+            <h1>时代峻峰is积分</h1>
+          </div>
+        </router-link>
+        <router-link tag="div" to="/case" class="case_lst">
+          <img src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/04.106fc8c0.jpg" class="fo" alt="">
+          <div class="to"></div>
+        </router-link>
+        <router-link tag="div" to="/case" class="case_lst">
+          <img src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/07.2f43931e.jpg" class="fo" alt="">
+          <div class="to"></div>
+        </router-link>
+        <router-link tag="div" to="/case" class="case_lst">
+          <img src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/01.503c5483.jpg" class="fo" alt="">
+          <div class="to"></div>
+        </router-link>
+      </div>
+    </div>
     <div class="server">
       <div class="server_top">
-        <h1>我们能做什么?</h1>
-        <h5>What can we do for you？</h5>
+        <h1>我们能做到！</h1>
+        <h5>What can do it!</h5>
       </div>
       <div class="server_bot">
         <div class="main">
           <div class="server_bot_top">
-            <div class="server_bot_top_left reveal-left">
+            <router-link tag="div" to="/business" class="server_bot_top_left reveal-left">
               <div>
                 <h1>网站平台开发</h1>
                 <p>
@@ -34,10 +104,10 @@
                   <span>各行业门户平台开发</span>
                 </p>
               </div>
-              <img :src="imgUrl+'/i_r5_c8.jpg'" alt="">
-            </div>
-            <div class="server_bot_top_right reveal-right">
-              <img :src="imgUrl+'/i_r5_c17.jpg'" alt="">
+              <img :src="imgUrl+'/index_0401.png'" alt="">
+            </router-link>
+            <router-link tag="div" to="/business"  class="server_bot_top_right reveal-right">
+              <img :src="imgUrl+'/index_0402.png'" alt="">
               <div>
                 <h1>APP开发</h1>
                 <p>
@@ -51,10 +121,10 @@
                   <span>社交型APP开发</span>
                 </p>
               </div>
-            </div>
+            </router-link>
           </div>
           <div class="server_bot_bot">
-            <div class="server_bot_top_left reveal-left">
+            <router-link tag="div" to="/business"  class="server_bot_top_left reveal-left">
               <div>
                 <h1>后台管理系统开发</h1>
                 <p>
@@ -67,10 +137,10 @@
                   <span>商务后台管理系统开发</span>
                 </p>
               </div>
-              <img :src="imgUrl+'/i_r7_c9.jpg'" alt="">
-            </div>
-            <div class="server_bot_top_right reveal-right">
-              <img :src="imgUrl+'/i_r7_c17.jpg'" alt="">
+              <img :src="imgUrl+'/index_0404.png'" alt="">
+            </router-link>
+            <router-link tag="div" to="/business"  class="server_bot_top_right reveal-right">
+              <img :src="imgUrl+'/index_0403.png'" alt="">
               <div>
                 <h1>响应式HTML5网站</h1>
                 <p>
@@ -79,64 +149,37 @@
                 <p>
                   <span>手机wap站</span>
                 </p>
-                <!--<p>-->
-                  <!--<span>P2P金融平台开发</span>-->
-                  <!--<span>各行业门户平台开发</span>-->
-                <!--</p>-->
               </div>
-            </div>
+            </router-link>
           </div>
         </div>
       </div>
     </div>
-    <div class="case">
-      <h1>案例展示</h1>
-      <h5>Our Cases List</h5>
-      <div class="case_box">
-        <div class="case_lst">
-          <img src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/06.50599bb3.jpg" class="fo" alt="">
-          <div class="to"></div>
-        </div>
-        <div class="case_lst">
-          <img src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/04.106fc8c0.jpg" class="fo" alt="">
-          <div class="to"></div>
-        </div>
-        <div class="case_lst">
-          <img src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/07.2f43931e.jpg" class="fo" alt="">
-          <div class="to"></div>
-        </div>
-        <div class="case_lst">
-          <img src="http://cdn.xuanfengge.com/wp-content/themes/lee3.0/dist/img/feature/01.503c5483.jpg" class="fo" alt="">
-          <div class="to"></div>
-        </div>
-      </div>
-    </div>
+
     <div class="news">
       <div class="news_top">
-        <h1>新闻动态</h1>
+        <h1>热门资讯</h1>
       </div>
       <div class="news_bot">
-        <router-link tag="div" to="">
+        <router-link v-for="(item,index) in newsListData" :key="index" tag="div" :to="{name:'News_detail',params:{id:index}}">
           <div>
-            <img src="http://cdn.jinkaidoor.com/media/news/2018/12/5c1b41a429813.jpg" alt="">
+            <img :src="item.imgUrl" alt="">
           </div>
-          <h2>家居保养有窍门</h2>
-          <p>十年来我们始终以更高的目标来要求自己，在不断完善自身管理</p>
+          <h2>{{item.title}}</h2>
+          <p>{{item.info}}</p>
         </router-link>
-        <div></div>
-        <div></div>
       </div>
     </div>
     <div class="about">
       <div class="about_top">
-        <h1>我们是谁?</h1>
+        <h1>关于豪舍</h1>
         <h5>Who are we?</h5>
       </div>
       <div class="about_bot">
         <router-link tag="div" to="/about" class="titleImg">
           <div class="h12">
             <h1>ABOUT</h1>
-            <h2>豪舍云</h2>
+            <h2>浙江豪舍云科技有限公司</h2>
           </div>
         </router-link>
         <div class="textInfo">
@@ -160,6 +203,7 @@
               swiperOption: {
                 spaceBetween: 30,   //图片之间的间距
                 loop: true,         //循环播放
+                grabCursor: true,
                 autoplay: {
                   delay: 5000,
                   disableOnInteraction: false
@@ -174,7 +218,24 @@
                 }
               },
               bannerData:[
-                {img:'/ban1.jpg',url:'http://www.baidu.com'}
+                {img:'/Index_banner_01.jpg',url:'http://www.baidu.com'},
+                {img:'/index_03.png',url:'http://www.baidu.com'},
+                {img:'/Index_banner_02.jpg',url:'http://www.baidu.com'}
+              ],
+              newsListData:[
+                {
+                  imgUrl:'../../static/img/news_02.jpg',
+                  title:'入户门材质哪种好?',
+                  info:'入户门在装修房屋的时候是很重要的，入户门的材质分为很多种'
+                },{
+                  imgUrl:'../../static/img/news_03.jpg',
+                  title:'防盗门防盗等级哪种好？好的防盗门怎么选？',
+                  info:'人们生活水平不断的提高，财产安全的意识也在越来越强'
+                },{
+                  imgUrl:'../../static/img/news_04.jpg',
+                  title:'吊轨推拉门等各类推拉门优缺点',
+                  info:'推拉门大大满足了现代人紧凑、集约的生活空间需求'
+                }
               ]
             }
         },
@@ -189,7 +250,7 @@
 </script>
 <style>
   .swiper-pagination-bullet-active{
-    background: #df8711 !important;
+    background: #408CD2 !important;
   }
 </style>
 <style lang="less" scoped>
@@ -200,7 +261,94 @@
     padding-bottom: 50px;
     .banner{
       width: 100%;
-      height: 600px;
+      height: 93vh;
+    }
+    .operation{
+      width: 100%;
+      padding: 50px 0;
+      /*height: 300px;*/
+      /*background: #F4F6FD;*/
+      .operation_top{
+        margin-bottom: 80px;
+        border-bottom: 1px solid #dfdfdf;
+        padding-bottom: 38px;
+        position: relative;
+        &::after{
+          display: block;
+          content: 'SERVER';
+          background: #408CD2;
+          color: #fff;
+          width: 80px;
+          text-align: center;
+          padding: 2px 0;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -10px;
+        }
+        h1{
+          font-size: 45px;
+          letter-spacing: 2px;
+        }
+        h5{
+          color: #666;
+        }
+      }
+      .operation_box{
+        width: 1200px;
+        margin: 0 auto;
+        .opera_list_left,.opera_list_right{
+          width: 100%;
+          height: 380px;
+          margin-bottom: 60px;
+          box-shadow: 3px 3px 46px 3px hsla(22,7%,48%,.15);
+          cursor: pointer;
+          .left,.right{
+            width: 450px;
+            height: 100%;
+            float: left;
+            box-sizing: border-box;
+            padding: 15px 20px;
+            text-align: left;
+            h1{
+              font-size: 32px;
+              margin-bottom: 10px;
+            }
+            h5{
+              font-size: 16px;
+              margin-bottom: 20px;
+            }
+            p{
+              line-height: 40px;
+              color: #666;
+            }
+          }
+          .imgBox{
+            width: 650px;
+            height: 100%;
+            border-radius: 5px;
+            overflow: hidden;
+            float: right;
+            img{
+              width: 100%;
+              transition: all .5s;
+            }
+          }
+          &:hover img{
+            transform: scale(1.2);
+          }
+        }
+        .opera_list_right{
+          .right{
+            width: 420px;
+            float: right;
+          }
+          .imgBox{
+            width: 650px;
+            float: left;
+          }
+        }
+      }
     }
     .server,.about{
       width: 100%;
@@ -221,7 +369,7 @@
           content: '';
           width: 100px;
           height: 2px;
-          background: #ff450c;
+          background: #408CD2;
           position: absolute;
           bottom: 0;
           left: 50%;
@@ -249,6 +397,7 @@
             }
             .server_bot_top_left,.server_bot_top_right{
               padding-right: 30px;
+              cursor: pointer;
               div{
                 width: 60%;
                 height: 100%;
@@ -322,36 +471,44 @@
           transform-style: preserve-3d;
           transition: .5s;
           perspective: 60000px;
+          cursor: pointer;
           .fo{
             width: 100%;
             height: 100%;
-            background: yellowgreen;
             transform: translateZ(150px);
           }
           .to{
             width: 100%;
             height: 100%;
-            background: red;
-            transform: rotateX(90deg) translateZ(155px);
+            background: #408CD2;
+            color: #fff;
+            transform: rotateX(90deg) translateZ(450px);
+            box-sizing: border-box;
+            padding: 15px 20px;
+            text-align: left;
+            h1{
+
+            }
           }
           &:hover{
-            transform: rotateX(90deg);
+            transform: rotateX(-90deg);
           }
         }
       }
     }
     .news{
       width: 100%;
-      margin-bottom: 80px;
+      background: #2F313F;
+      padding: 30px 0 120px;
       .news_top{
         padding: 50px 0 30px;
         position: relative;
-        border-bottom: @border-bottom;
+        border-bottom: 1px solid #999;
         margin-bottom: 80px;
         &::after{
           display: block;
           content: 'NEWS';
-          background: #ff2b05;
+          background: #408CD2;
           color: #fff;
           width: 60px;
           text-align: center;
@@ -364,6 +521,7 @@
         h1{
           font-size: 48px;
           line-height: 60px;
+          color: #fff;
         }
       }
       .news_bot{
@@ -380,14 +538,14 @@
           overflow: hidden;
           margin-bottom: 10px;
           cursor: pointer;
-          box-shadow: 3px 3px 46px 3px hsla(22,7%,48%,.15);
+          box-shadow: 3px 3px 46px 3px hsla(222,77%,48%,.15);
           transition: all .5s;
+          background: #fff;
           div{
             width: 100%;
             height: 300px;
-            background: yellowgreen;
             img{
-              width: 100%;
+              height: 100%;
               transition: all .6s;
             }
             &:hover img{
@@ -398,13 +556,29 @@
             transform: translateY(-10px);
           }
           h2{
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
             line-height: 35px;
-            border-left: 5px solid #ff4c17;
-            padding-left: 10px;
+            /*border-left: 5px solid #408CD2;*/
+            padding-left: 30px;
             box-sizing: border-box;
             margin-bottom: 10px;
+            position: relative;
+            &:after{
+              display: block;
+              content: '';
+              width: 5px;
+              height: 100%;
+              background: #408CD2;
+              position: absolute;
+              left: 13px;
+              top: 0;
+            }
           }
           p{
+            box-sizing: border-box;
+            padding:0 15px;
             height: 58px;
             line-height: 29px;
             font-size: 16px;
@@ -418,7 +592,6 @@
     }
     .about{
       width: 100%;
-      background: #f5f5f5;
       padding: 30px 0 80px;
       .about_top{
         margin-bottom: 50px;
@@ -430,9 +603,9 @@
           cursor: pointer;
           width: 100%;
           height: 200px;
-          background: url("https://www.xuanfengge.com/wp-content/uploads/2017/04/1c4fd43.jpg") no-repeat center/cover;
           overflow: hidden;
           .h12{
+            background: url("https://www.xuanfengge.com/wp-content/uploads/2017/04/1c4fd43.jpg") no-repeat center/cover;
             width: 100%;
             height: 400px;
             color: #fff;

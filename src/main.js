@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './vuex/store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
@@ -23,7 +24,7 @@ Vue.prototype.$reveal = (className,flag,direction) => {
     // 在移动端是否使用动画
     mobile: false,
     // 滚动的距离，单位可以用%，rem等
-    distance: '120px',
+    distance: '220px',
     // 其他可用的动画效果
     opacity: 0.001,
     easing: 'linear',
@@ -39,6 +40,7 @@ Vue.use(ElementUI)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
