@@ -2,14 +2,16 @@
   <div id="app">
     <heads/>
     <router-view/>
+    <foot/>
   </div>
 </template>
 
 <script>
   import heads from './components/Head'
+  import foot from './components/Foot'
   export default {
     name: 'App',
-    components:{heads},
+    components:{heads,foot},
     mounted() {
       this.$router.afterEach((to, from, next) => {
         window.scrollTo(0, 0)   //跳转页面回到顶部

@@ -115,7 +115,7 @@
     /*font-family: "Helvetica Neue",\5FAE\8F6F\96C5\9ED1,Tohoma;*/
     .banner{
       width: 100%;
-      height: 296px;
+      height: 500px;
       background: url("../../static/img/banner6.jpg") no-repeat center/cover;
       .imgBox{
         padding-top:110px;

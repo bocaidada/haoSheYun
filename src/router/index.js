@@ -2,10 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 const Index = () => import('@/components/Index')
 const News = () => import('@/components/News')
-const About = () => import('@/components/Abouts')
+const About = () => import('@/components/About')
 const Contact = () => import('@/components/Contact')
 const Technology = () => import('@/components/Technology')
 const Case = () => import('@/components/Case')
+const Service = () => import('@/components/Service')
 const News_detail = () => import('@/components/News_detail')
 
 Vue.use(Router)
@@ -28,6 +29,14 @@ export default new Router({
       meta: {
         keepAlive: true,   //判断是否需要做页面缓存
         hedNum: 5          //页面刷新保持相应导航高亮
+      }
+    },{
+      path: '/service',
+      name: 'Service',
+      component: Service,
+      meta: {
+        keepAlive: true,   //判断是否需要做页面缓存
+        hedNum: 1          //页面刷新保持相应导航高亮
       }
     },{
       path: '/case',

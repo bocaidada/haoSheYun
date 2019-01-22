@@ -16,7 +16,7 @@
         <h1>公司业务</h1>
       </div>
       <div class="operation_box">
-        <div class="opera_list_left reveal-right">
+        <router-link tag="div" to="/service" class="opera_list_left reveal-right">
           <div class="left">
             <h1>三维家居商城</h1>
             <h5>覆盖家装设计到家居建材全品类销售的电商平台</h5>
@@ -26,12 +26,12 @@
             <p>覆盖施工管理、家装设计到家居建材全品类销售</p>
           </div>
           <div class="imgBox">
-            <img src="../../static/img/new_list.jpg" alt="">
+            <img src="../../static/img/sanWei.png" alt="">
           </div>
-        </div>
-        <div class="opera_list_right reveal-left">
+        </router-link>
+        <router-link tag="div" to="/service" class="opera_list_right reveal-left">
           <div class="imgBox">
-            <img src="../../static/img/new_list.jpg" alt="">
+            <img src="../../static/img/jiazhuang.png" alt="">
           </div>
           <div class="right">
             <h1>家装港咨询平台</h1>
@@ -41,8 +41,8 @@
             <p>为装修企业提供各种排名服务以及客户流量和资源</p>
             <p>定期举行全国性家装设计大赛、各种行业报告、会议和学术研讨</p>
           </div>
-        </div>
-        <div class="opera_list_left reveal-right">
+        </router-link>
+        <router-link tag="div" to="/service" class="opera_list_left reveal-right">
           <div class="left">
             <h1>门装宝新零售平台</h1>
             <h5>专注销售门及关联产品的F2B新零售平台</h5>
@@ -52,9 +52,9 @@
             <p>为经销商、安装技师等注册会员提供包括厂家直销、线上下单、跟踪定制、物流跟单、技师抢单等一站式扁平化服务</p>
           </div>
           <div class="imgBox">
-            <img src="../../static/img/new_list.jpg" alt="">
+            <img src="../../static/img/menZhuang.png" alt="">
           </div>
-        </div>
+        </router-link>
       </div>
     </div>
     <!--we can-->
@@ -218,9 +218,8 @@
                 }
               },
               bannerData:[
-                {img:'/Index_banner_01.jpg',url:'http://www.baidu.com'},
-                {img:'/index_03.png',url:'http://www.baidu.com'},
-                {img:'/Index_banner_02.jpg',url:'http://www.baidu.com'}
+                {img:'/banner_1.jpg',url:'http://www.baidu.com'},
+                {img:'/banner_2.png',url:'http://www.baidu.com'}
               ],
               newsListData:[
                 {
@@ -275,10 +274,10 @@
         position: relative;
         &::after{
           display: block;
-          content: 'SERVER';
+          content: 'SERVICE';
           background: #408CD2;
           color: #fff;
-          width: 80px;
+          width: 86px;
           text-align: center;
           padding: 2px 0;
           position: absolute;
@@ -335,7 +334,7 @@
             }
           }
           &:hover img{
-            transform: scale(1.2);
+            transform: scale(1.1);
           }
         }
         .opera_list_right{

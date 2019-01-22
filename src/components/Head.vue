@@ -22,7 +22,7 @@
             return {
               headData:[
                 {name:'首页',path:'/'},
-                {name:'公司业务',path:'/server'},
+                {name:'公司业务',path:'/service'},
                 {name:'技术支持',path:'/technology'},
                 {name:'新闻资讯',path:'/news'},
                 {name:'经典案例',path:'/case'},
