@@ -2,14 +2,14 @@
   <section>
     <div class="cont">
       <dic class="cont_left">
-        <p>地址：杭州市西湖区三墩镇灯彩街539号君尚国际广场A座1808室</p>
-        <p>电话：0571-56205653 <span style="padding-left: 20px">邮编：310030</span></p>
-        <p>copyright 2018-2048 浙江豪舍云科技有限公司</p>
-        <p>统一社会信用代码：91330106MA2B09NH0B</p>
+        <p>地址：浙江省衢州市江山市贺村镇贺丽路6号</p>
+        <p>电话：0570-4989090 <span style="padding-left: 20px">邮编：324100</span></p>
+        <p>copyright 长期有效 浙江汇链科技有限公司</p>
+        <p>统一社会信用代码：91330881MA29UP06XM</p>
       </dic>
       <dic class="cont_right">
         <img src="../../static/img/wei.jpg" alt="">
-        <p>豪舍云官微</p>
+        <p>汇链官微</p>
       </dic>
     </div>
   </section>

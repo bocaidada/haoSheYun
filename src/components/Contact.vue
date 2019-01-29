@@ -4,9 +4,9 @@
     <div class="card">
       <h1>联系我们</h1>
       <div>
-        <p>公司：<span>浙江豪舍云科技有限公司</span></p>
-        <p>电话：<span>0571-56205653</span></p>
-        <p>地址：<span>杭州市西湖区三墩镇灯彩街539号君尚国际广场A座1808室 </span></p>
+        <p>公司：<span>浙江汇链科技有限公司</span></p>
+        <p>电话：<span>0570-4989090</span></p>
+        <p>地址：<span>浙江省衢州市江山市贺村镇贺丽路6号</span></p>
         <img src="../../static/img/kefu.jpg" alt="">
       </div>
     </div>
@@ -25,8 +25,8 @@
           let map = new BMap.Map("lp_map");
           map.enableScrollWheelZoom(true); //启用滚轮放大缩小，默认禁用
           map.enableContinuousZoom(true); //启用地图惯性拖拽，默认禁用
-          let point = new BMap.Point(120.0779604696,30.3288810170);
-          map.centerAndZoom(point,18);
+          let point = new BMap.Point(118.5434380000,28.6825610000);
+          map.centerAndZoom(point,16);
           var mk = new BMap.Marker(point);
           map.addOverlay(mk);
           map.panTo(point);

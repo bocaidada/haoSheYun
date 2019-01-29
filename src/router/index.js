@@ -19,7 +19,7 @@ export default new Router({
       name: 'Index',
       component: Index,
       meta: {
-        keepAlive: true,   //判断是否需要做页面缓存
+        keepAlive: false,   //判断是否需要做页面缓存
         hedNum: 0          //页面刷新保持相应导航高亮
       }
     },{
@@ -81,6 +81,10 @@ export default new Router({
           }
         }
       ]
+    },
+    {
+      path:'*',
+      redirect: '/'
     }
   ]
 })

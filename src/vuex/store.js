@@ -8,7 +8,8 @@ let store = new vuex.Store({
     newsFlag: true,
     footerFlag: true,
     sendHost: 'http://api.jinkaidoor.com/v1',  //正式服务器地址
-    qiNiuServer:'http://cdn.jinkaidoor.com/web' //七牛云正式服务器
+    // qiNiuServer:'http://cdn.jinkaidoor.com/web' //七牛云正式服务器
+    qiNiuServer:'../../static/img' //七牛云正式服务器
   },
   mutations: {
     headColorNum: (state,params) => state.headColorNum = params,

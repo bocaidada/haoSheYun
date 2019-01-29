@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <heads/>
-    <router-view/>
-    <foot/>
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive"/>
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive"/>
+    <foots/>
   </div>
 </template>
 
 <script>
   import heads from './components/Head'
-  import foot from './components/Foot'
+  import foots from './components/Foot'
   export default {
     name: 'App',
-    components:{heads,foot},
+    components:{heads,foots},
     mounted() {
       this.$router.afterEach((to, from, next) => {
         window.scrollTo(0, 0)   //跳转页面回到顶部
@@ -64,6 +67,10 @@
   }
   li{
     list-style-type: none;
+  }
+  /*解决火狐浏览器点击出现虚线选框问题*/
+  a:focus,button{
+    outline: none;
   }
   a{
     text-decoration: none;

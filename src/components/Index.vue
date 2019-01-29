@@ -3,7 +3,7 @@
     <!--banner-->
     <div class="banner">
       <swiper :options="swiperOption" style="height: 100%">
-        <swiper-slide v-for="(item,index) in bannerData" :key="index" :style="{background: 'url('+imgUrl+item.img+') no-repeat center/cover'}">
+        <swiper-slide v-for="(item,index) in bannerData" :key="index" :style="{background: 'url('+baseImg+item.img+') no-repeat center/cover'}">
           <!--<a style="display: block;width: 100%;height: 100%" v-if="item.url" :href="item.url" target="_blank"></a>-->
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
@@ -18,7 +18,7 @@
       <div class="operation_box">
         <router-link tag="div" to="/service" class="opera_list_left reveal-right">
           <div class="left">
-            <h1>三维家居商城</h1>
+            <h1>中国木门产品互联网设计研究院</h1>
             <h5>覆盖家装设计到家居建材全品类销售的电商平台</h5>
             <p>大数据、智能制造</p>
             <p>互联网+虚拟现实、VR参观浏览</p>
@@ -26,15 +26,15 @@
             <p>覆盖施工管理、家装设计到家居建材全品类销售</p>
           </div>
           <div class="imgBox">
-            <img src="../../static/img/sanWei.png" alt="">
+            <img :src="baseImg+'/sanWei.png'" alt="">
           </div>
         </router-link>
         <router-link tag="div" to="/service" class="opera_list_right reveal-left">
           <div class="imgBox">
-            <img src="../../static/img/jiazhuang.png" alt="">
+            <img :src="baseImg+'/jiazhuang.png'" alt="">
           </div>
           <div class="right">
-            <h1>家装港咨询平台</h1>
+            <h1>木门产品设计和异地协同设计云服务平台</h1>
             <h5>为装修业主及装修企业提供家装资讯的服务平台</h5>
             <p>装修设计、家装知识</p>
             <p>材料选购，家具选购以及家具保养</p>
@@ -44,7 +44,7 @@
         </router-link>
         <router-link tag="div" to="/service" class="opera_list_left reveal-right">
           <div class="left">
-            <h1>门装宝新零售平台</h1>
+            <h1>木业机械设备市场</h1>
             <h5>专注销售门及关联产品的F2B新零售平台</h5>
             <p>个性化定制</p>
             <p>去中间商，厂家直销</p>
@@ -52,7 +52,7 @@
             <p>为经销商、安装技师等注册会员提供包括厂家直销、线上下单、跟踪定制、物流跟单、技师抢单等一站式扁平化服务</p>
           </div>
           <div class="imgBox">
-            <img src="../../static/img/menZhuang.png" alt="">
+            <img :src="baseImg+'/menZhuang.png'" alt="">
           </div>
         </router-link>
       </div>
@@ -104,10 +104,10 @@
                   <span>各行业门户平台开发</span>
                 </p>
               </div>
-              <img :src="imgUrl+'/index_0401.png'" alt="">
+              <img :src="baseImg+'/index_0401.png'" alt="">
             </router-link>
             <router-link tag="div" to="/business"  class="server_bot_top_right reveal-right">
-              <img :src="imgUrl+'/index_0402.png'" alt="">
+              <img :src="baseImg+'/index_0402.png'" alt="">
               <div>
                 <h1>APP开发</h1>
                 <p>
@@ -137,10 +137,10 @@
                   <span>商务后台管理系统开发</span>
                 </p>
               </div>
-              <img :src="imgUrl+'/index_0404.png'" alt="">
+              <img :src="baseImg+'/index_0404.png'" alt="">
             </router-link>
             <router-link tag="div" to="/business"  class="server_bot_top_right reveal-right">
-              <img :src="imgUrl+'/index_0403.png'" alt="">
+              <img :src="baseImg+'/index_0403.png'" alt="">
               <div>
                 <h1>响应式HTML5网站</h1>
                 <p>
@@ -163,7 +163,7 @@
       <div class="news_bot">
         <router-link v-for="(item,index) in newsListData" :key="index" tag="div" :to="{name:'News_detail',params:{id:index}}">
           <div>
-            <img :src="item.imgUrl" alt="">
+            <img :src="baseImg+item.imgUrl" alt="">
           </div>
           <h2>{{item.title}}</h2>
           <p>{{item.info}}</p>
@@ -172,20 +172,21 @@
     </div>
     <div class="about">
       <div class="about_top">
-        <h1>关于豪舍</h1>
+        <h1>关于汇链</h1>
         <h5>Who are we?</h5>
       </div>
       <div class="about_bot">
         <router-link tag="div" to="/about" class="titleImg">
           <div class="h12">
             <h1>ABOUT</h1>
-            <h2>浙江豪舍云科技有限公司</h2>
+            <h2>浙江汇链科技有限公司</h2>
           </div>
         </router-link>
         <div class="textInfo">
           <p>
-            浙江豪舍云科技有限公司是一家专注于家装物联网新零售技术平台开发和运营的创新型科技公司，公司总部位于杭州。平台以家居为切入点，为千家万户提供智能家居、家装服务、智能养老、家庭健康服务和新零售等服务。企业以互联网为依托，通过运用大数据、人工智能等先进技术手段，对商品的生产、流通与销售过程进行升级改造，进而重塑业态结构与生态圈，并对线上服务、线下体验以及现代物流进行深度融合的零售新模式，是中国当代新经济虚和实相结合新的商业模式。集合各个城市的装饰公司联合开通全国城市分站。为居民提供房产信息、设计师、装修资讯、绿色装修建材、绿色环保家居用品、楼盘户型、装修图片、装修招标、装修解答、免费量房以及个性化设计等内容及服务，全心全意为广大业主提供整体装修一站式服务。
+            浙江汇链科技有限公司，提供从木门产品设计、原材料集中采购、智能制造、新零售、物流安装到供应链金融服务的全产业链服务。用管理、技术、交易、金融形成产业数字竞争力，打通木门产业链的上下游，打造木门产业生态运营能力，致力于为全国木业企业提供上游原材料集中采购服务，木制产品智能设计服务，经销商销售、一门多业及售后支持服务。
           </p>
+          <p>公司成立了中国木门产业互联网设计研究院，开发了异地协同设计系统，建设网上设计成果交易市场体系，打通木门智能制造ERP、MES系统，对接工业互联网大数据平台，基于iAD（数字化建筑设计）开发木门产品云设计系统，设计应用平台、标准件库等灵活部署在云桌面，为全国木门企业提供随时随地接入的、安全可靠的云设计方案。</p>
         </div>
       </div>
     </div>
@@ -198,7 +199,7 @@
         name: "Index",
         data() {
             return {
-              imgUrl:'../../static/img',
+              baseImg: this.$store.state.qiNiuServer,
               // scrollReveal: scrollReveal(),
               swiperOption: {
                 spaceBetween: 30,   //图片之间的间距
@@ -218,20 +219,20 @@
                 }
               },
               bannerData:[
-                {img:'/banner_1.jpg',url:'http://www.baidu.com'},
-                {img:'/banner_2.png',url:'http://www.baidu.com'}
+                {img:'/huilian_01.jpg',url:'http://www.baidu.com'},
+                {img:'/huilian_02.jpg',url:'http://www.baidu.com'}
               ],
               newsListData:[
                 {
-                  imgUrl:'../../static/img/news_02.jpg',
+                  imgUrl:'/news_02.jpg',
                   title:'入户门材质哪种好?',
                   info:'入户门在装修房屋的时候是很重要的，入户门的材质分为很多种'
                 },{
-                  imgUrl:'../../static/img/news_03.jpg',
+                  imgUrl:'/news_03.jpg',
                   title:'防盗门防盗等级哪种好？好的防盗门怎么选？',
                   info:'人们生活水平不断的提高，财产安全的意识也在越来越强'
                 },{
-                  imgUrl:'../../static/img/news_04.jpg',
+                  imgUrl:'/news_04.jpg',
                   title:'吊轨推拉门等各类推拉门优缺点',
                   info:'推拉门大大满足了现代人紧凑、集约的生活空间需求'
                 }
@@ -260,7 +261,7 @@
     padding-bottom: 50px;
     .banner{
       width: 100%;
-      height: 93vh;
+      height: 600px;
     }
     .operation{
       width: 100%;
@@ -381,9 +382,6 @@
           width: 1200px;
           margin: 0 auto;
           padding: 20px 0;
-          .server_bot_top{
-            border-bottom: @border-bottom;
-          }
           .server_bot_top,.server_bot_bot{
             height: 300px;
             padding: 30px 0;

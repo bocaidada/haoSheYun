@@ -2,7 +2,7 @@
   <div>
     <header>
       <div class="head_left">
-        <img src="../../static/img/logo.png" alt="" class="logo" ondragstart="return false">
+        <img src="../../static/img/huilian_06.png" alt="" class="logo" ondragstart="return false">
         <img src="../../static/img/index_02.png" alt="" class="info" ondragstart="return false">
       </div>
       <ul class="head_right">
